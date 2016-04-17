@@ -1,0 +1,50 @@
+Visual representation of New York City emergency response incendents
+========================================================
+author: Benjamin Berhault
+date: 17/04/2016
+css: custom.css
+## Shiny Application and Reproducible Pitch
+
+As part of the course Developing Data Products from Johns Hopkins University.
+
+
+Introduction
+========================================================
+
+Those slides present a Shiny application available at [http://benjamin-berhault.shinyapps.io/FDNY](http://benjamin-berhault.shinyapps.io/FDNY)
+
+This ShinyApp allows you to visualise Emergency Response Incidents in New York City based on data from the [NYC OpenData portal](https://data.cityofnewyork.us/Public-Safety/Emergency-Response-Incidents/pasr-j7fb#Embed) for the period 2013 to 2015.
+
+<center>![Preview](preview.png)</center>
+
+Original inspiration by David Kahle
+========================================================
+<center>
+![Inpiration](inspiration.png)
+<i>CrimeMap</i>
+</center>
+
+Explanation
+========================================================
+To smooth data due to major differences in data amount between categories, I use the hyperbolic tangent function
+```{r}
+custom_tanh <- function(x){tanh(2*x)}
+```
+on the alpha scale  calibration parameter of the <b>stat_density2d()</b> function.
+```{r, eval = FALSE}
+scale_alpha(range = c(0, custom_tanh(nrow(create.df())/max(incident_occurences)))
+
+```
+
+
+Ressources
+========================================================
+
+The GitHub repo related to this Shiny application is available [here](https://github.com/benjamin-berhault/developing-data-products)
+
+### Link
+- Application : [benjamin-berhault.shinyapps.io/FDNY](http://benjamin-berhault.shinyapps.io/FDNY)
+- Data : [NYC OpenData](https://data.cityofnewyork.us/Public-Safety/Emergency-Response-Incidents/pasr-j7fb#Embed)
+- Inspiration : [London CrimeMap ShinyApp](http://bit.ly/londonr_crimemap)
+
+<center><img src="http://opensourcemac.com/wp-content/uploads/2009/12/R.png"></center>
