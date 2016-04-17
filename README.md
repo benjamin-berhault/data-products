@@ -12,13 +12,13 @@ The 2D Kernel density estimation is compute by the <a href="http://docs.ggplot2.
 4. Click on the <b>UPDATE GRAPH AND TABLES</b> to update Heat Map, Trends and Sub Dataset tabs
 5. Enjoy the result!
 
-### ShinyApp
+#### ShinyApp
 * [https://benjamin-berhault.shinyapps.io/FDNY](https://benjamin-berhault.shinyapps.io/FDNY)
 
-### Presentation
+#### Presentation
 * on [GitHub](http://benjamin-berhault.github.io/developing-data-products/presentation/FDNY_shiny_app-rpubs.html)
 * on [RPubs](http://rpubs.com/BenDataGeek/emergency_response)
 
-### Code
+#### Code
 * on [GitHub](https://github.com/benjamin-berhault/developing-data-products/ShinyApp)
 
